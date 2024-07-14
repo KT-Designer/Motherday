@@ -1,0 +1,606 @@
+/* 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+
+
+
+body,
+html {
+    overflow-x: hidden;
+
+}
+
+body {
+    background-image: url(../images/bg.png);
+    background-repeat: repeat;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+
+/* 主視覺 */
+.kv {
+    position: relative;
+    background-image: url(../images/KVbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.kv .mother {
+    padding: 26px;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.kv .mother img {
+    max-width: 1080px;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+}
+
+.kv .logo img {
+    position: absolute;
+    top: 0;
+    left: 1%;
+    max-width: 300px;
+}
+
+
+#right {
+    position: absolute;
+    bottom: 0%;
+    right: 38%;
+    width: 50%;
+
+}
+
+#left {
+    position: absolute;
+    bottom: 0%;
+    left: 38%;
+    width: 50%;
+
+
+}
+
+
+
+
+
+/* 免運又折現 */
+.event,
+.today,
+.more,
+.free,
+.give,
+.other,
+.brand {
+    text-align: center;
+    margin-top: 3%;
+    padding: 16px;
+
+}
+
+.event .title img,
+.today .title img {
+    max-width: 955px;
+    width: 100%;
+    margin-top: 4%;
+}
+
+.event .detail {
+    max-width: 1104px;
+    width: 100%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.event .coupon {
+    max-width: 900px;
+    width: 90%;
+    margin-top: 3%;
+}
+
+/* 浮動花 */
+
+.fixed_left {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    max-width: 250px;
+    z-index: 2;
+}
+
+.fixed_right {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    max-width: 250px;
+    z-index: 2;
+}
+
+
+
+
+
+
+/* 只有今天 */
+.today .container {
+    max-width: 1152px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    margin-top: 3%;
+    justify-content: center;
+
+}
+
+.today .container .item {
+    flex-basis: calc(33.3% - 10px);
+    transition: 0.3s;
+}
+
+.today .container .item:hover {
+    transform: translateY(-14px);
+}
+
+.today .container .item img {
+    max-width: 379px;
+    width: 100%;
+}
+
+/* 超多夯品忙下單 */
+.more .title img,
+.free .title img,
+.give .title img,
+.other .title img,
+.brand .title img {
+    max-height: 167px;
+    max-width: 100%;
+    /* ↑隨視窗自動縮放 */
+}
+
+.morebox {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff45;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.mySwiper {
+    display: flex;
+}
+
+
+
+.swiper-wrapper {
+    max-width: 1000px;
+    padding-left: 16px;
+    margin: 40px;
+
+
+}
+
+/* 超多夯品忙下單_方向鍵 */
+.myprev,
+.mynext {
+    background-color: #00756C;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+
+.swiper-wrapper .card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+
+
+
+
+
+/* 一件免運忙下單 */
+.free a,
+.swiper-wrapper a,
+.card_g a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.card_g .container {
+    max-width: 1094px;
+    margin: auto;
+}
+
+.card_g .container .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+
+}
+
+.card_g .container .list .card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    flex-basis: calc(20% - 6px);
+    box-sizing: border-box;
+    padding: 14px;
+    transition: 0.3s;
+
+}
+
+
+
+.card_g .container .list .card:hover h3,
+.swiper-wrapper .card:hover h3 {
+    color: #DB0064;
+}
+
+
+.card_g .list .card img,
+.swiper-wrapper img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card_g .container .card .card_body,
+.swiper-wrapper .card_body {
+    margin: auto;
+}
+
+.card_g .container .card_body h3,
+.swiper-wrapper .card_body h3 {
+    font-family: 'Noto Sans TC';
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 7px 0px;
+    height: 32px;
+
+}
+
+.card_g .list .card .money,
+.swiper-wrapper .money {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.card_g .list .card span,
+.swiper-wrapper .card_body span {
+    font-family: 'Times New Roman';
+    color: #DB0064;
+    font-weight: 600;
+}
+
+.card_g .money h6,
+.swiper-wrapper .card_body h6 {
+    font-family: 'Times New Roman';
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #aaa;
+    padding-right: 4px;
+}
+
+.card_g .money h1,
+.swiper-wrapper .card_body h1 {
+    font-family: 'Times New Roman';
+    font-size: 24px;
+    font-weight: 800;
+    color: #DB0064;
+}
+
+/* 忙著下單送媽媽 */
+.give_more,
+.free_more {
+    margin-top: 3%;
+    background-color: #ffffff45;
+    max-width: 1200px;
+    padding: 80px 16px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+/* 更多商品 */
+.other .container {
+    max-width: 1152px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    margin-top: 1%;
+    justify-content: center;
+
+}
+
+.other .container .item {
+    flex-basis: calc(20% - 10px);
+    transition: 0.3s;
+}
+
+.other .container .item:hover {
+    transform: translateY(-10px);
+}
+
+.other .container .item img {
+    max-width: 200px;
+    width: 100%;
+}
+
+
+
+/* 熱門品牌 */
+.brand .container {
+    max-width: 1152px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    margin-top: 1%;
+    justify-content: center;
+
+}
+
+.brand .container .item {
+    flex-basis: calc(16.67% - 10px);
+    transition: 0.3s;
+}
+
+.brand .container .item:hover {
+    transform: translateY(-10px);
+}
+
+.brand .container .item img {
+    max-width: 379px;
+    width: 100%;
+}
+
+/* 活動說明 */
+
+.rule {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 8%;
+}
+
+.rule img {
+    max-width: 1200px;
+    width: 100%;
+    vertical-align: bottom;
+    /* ↑ 解決底部空隙 */
+}
+
+.rule .rule_MB {
+    display: none;
+}
+
+.rule .rulebox {
+    background-color: #FFC6D2;
+    padding: 0px 6% 80px;
+    margin-bottom: 20%;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.rule .rulebox .title {
+    background-color: #DB0064;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+    padding: 24px;
+    border-radius: 10px;
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+.rule .rulebox .eventbox {
+    display: flex;
+    text-align: start;
+    gap: 0px 40px;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+
+.rule .rulebox .eventbox h3 {
+    font-size: 20px;
+    font-weight: 900;
+    white-space: nowrap;
+
+}
+
+.rule .rulebox .eventbox p,
+.rule .rulebox .eventbox li {
+    font-size: 16px;
+    font-family: 'Noto Sans TC';
+    line-height: 1.5;
+
+}
+
+.rule .rulebox .day p {
+    font-weight: 900;
+
+}
+
+.rule ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.rule .rulebox .eventbox li {
+    list-style: decimal;
+}
+
+
+
+
+
+
+
+
+/* footer */
+footer img {
+    max-width: 1920px;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+footer p {
+    text-align: center;
+    padding: 16px;
+    background-color: #DB0064;
+
+}
+
+footer p {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+
+@media screen and (max-width:1199px) {
+    /* 主視覺 */
+
+    .kv .mother img {
+        z-index: 1;
+    }
+
+    #right {
+        position: absolute;
+        bottom: 0%;
+        right: 84%;
+        width: 98%;
+
+    }
+
+    #left {
+        position: absolute;
+        bottom: 0%;
+        left: 84%;
+        width: 98%;
+
+    }
+
+    /* 浮動花 */
+    .fixed_left,
+    .fixed_right {
+        display: none;
+    }
+
+    /* 超多夯品忙下單 */
+    .myprev,
+    .mynext {
+        display: none;
+    }
+}
+
+
+
+
+@media screen and (max-width:768px) {
+
+    /* 主視覺 */
+    .kv .mother {
+        height: auto;
+    }
+
+    .kv .mother img {
+        position: static;
+    }
+
+    .kv .logo img {
+        width: 30%;
+    }
+
+
+
+    /* 只有今天 */
+    .today .container .item {
+        flex-basis: calc(50% - 10px);
+
+    }
+
+
+    /* 一件免運忙下單 */
+    .card_g .container .list .card {
+        flex-basis: calc(50% - 6px);
+
+    }
+
+    /* 活動說明 */
+    .rule {
+        margin: 8% 16px 8% 16px;
+    }
+
+    .rule .rule_MB {
+        display: block;
+    }
+
+    .rule .rule_PC {
+        display: none;
+    }
+
+    .rule .rulebox .eventbox {
+        flex-direction: column;
+    }
+
+}
+
+
+@media screen and (max-width:576px) {
+
+
+
+    /* 更多商品 */
+    .other .container .item {
+        flex-basis: calc(50% - 10px);
+    }
+
+    /* 熱門品牌 */
+    .brand .container .item {
+        flex-basis: calc(33.33% - 10px);
+    }
+
+    /* 活動說明 */
+    .rule .rulebox .title {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+
+}
