@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     scrub: 0.5,
                 },
             });
+            t1.to("#center", { yPercent: "-40" }, "flower");
             t1.to("#left", { xPercent: "86" }, "flower");
             t1.to("#right", { xPercent: "-86" }, "flower");
             // 取一個同樣名稱的標籤"flower"，讓兩個元素同時移動。

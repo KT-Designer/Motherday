@@ -14,11 +14,169 @@ body {
     background-repeat: repeat;
 }
 
-#container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+/* 讓置頂鍵會自然滾動 */
+html {
+    scroll-behavior: smooth;
 }
+
+/* 浮動主選單_監聽(.active配合JS) */
+.menu_pc a.active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+
+/* 置頂鍵 */
+#scrolltop {
+    display: none !important;
+    position: fixed;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    bottom: 70px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+/* PC導覽列 */
+.open {
+    position: fixed;
+    top: 60px;
+    right: -50px;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    writing-mode: vertical-lr;
+    padding: 14px 8px;
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 14px 0px 0px 14px;
+    cursor: pointer;
+
+}
+
+.open:hover {
+    background-color: #DB0064;
+}
+
+.menu_pc {
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.menu_pc .close {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu_pc .close p {
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    line-height: 40px;
+    border-radius: 50px;
+}
+
+
+
+.menu_pc li a {
+    font-family: 'Noto Sans TC';
+    margin: auto;
+    text-align: center;
+    max-width: 115px;
+    max-height: 45px;
+    padding: 12px 0px;
+    background-color: #DB0064;
+    margin-bottom: 2px;
+    display: block;
+
+}
+
+.menu_pc li a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+
+}
+
+.menu_pc ul {
+    padding-right: 4%;
+}
+
+.menu_pc ul a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu_pc .top a {
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+
+/* 浮動主選單_手機 */
+.menu_MB {
+    display: none;
+    width: 100%;
+    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 2;
+    position: fixed;
+    bottom: 0px;
+    background-color: #ffffff6e;
+}
+
+
+
+.menu_MB ul {
+    display: flex;
+}
+
+
+.menu_MB ul li a {
+    display: inline-block;
+    width: 90px;
+    margin: 0px 2px;
+    padding: 10px 20.5px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #DB0064;
+}
+
+
+
+
+
+
+
+.menu_MB ul li a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+
 
 
 
@@ -40,11 +198,11 @@ body {
 
 }
 
-.kv .mother img {
+#center {
     max-width: 1080px;
     width: 100%;
     position: absolute;
-    top: 10%;
+    bottom: -20%;
 }
 
 .kv .logo img {
@@ -85,7 +243,7 @@ body {
 .other,
 .brand {
     text-align: center;
-    margin-top: 3%;
+    margin-top: 2%;
     padding: 16px;
 
 }
@@ -180,7 +338,7 @@ body {
     background-color: #ffffff45;
     border-radius: 10px;
     margin: auto;
-    padding: 20px;
+    padding: 8px 20px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -333,7 +491,7 @@ body {
     margin-top: 3%;
     background-color: #ffffff45;
     max-width: 1200px;
-    padding: 80px 16px;
+    padding: 6% 16px;
     margin: auto;
     border-radius: 10px;
 }
@@ -500,8 +658,19 @@ footer p {
 @media screen and (max-width:1199px) {
     /* 主視覺 */
 
+    .kv .mother {
+        height: auto;
+    }
+
     .kv .mother img {
         z-index: 1;
+    }
+
+    #center {
+        max-width: 1080px;
+        width: 100%;
+        position: relative;
+        top: 10%;
     }
 
     #right {
@@ -539,13 +708,6 @@ footer p {
 @media screen and (max-width:768px) {
 
     /* 主視覺 */
-    .kv .mother {
-        height: auto;
-    }
-
-    .kv .mother img {
-        position: static;
-    }
 
     .kv .logo img {
         width: 30%;
@@ -598,6 +760,19 @@ footer p {
 
 
 @media screen and (max-width:576px) {
+
+    /* 置頂鍵 */
+    #scrolltop {
+        display: block !important;
+    }
+
+    .menu_pc {
+        display: none;
+    }
+
+    .menu_MB {
+        display: block;
+    }
 
 
 
